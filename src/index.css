@@ -17,10 +17,10 @@
     --color-dark: #1a1a1a;
     --color-light: #f3f3f3;
 
-    --color-grey-500: #808080; 
-    --color-grey-400: #999; 
-    --color-grey-300: #ccc; 
-    --color-grey-200: #E6E6E6; 
+    --color-grey-500: #808080;
+    --color-grey-400: #999;
+    --color-grey-300: #ccc;
+    --color-grey-200: #e6e6e6;
 
     --color-primary-50: #ffebef;
     --color-primary-100: #ffcdd3;
@@ -113,6 +113,11 @@ button,
 textarea,
 select {
     font: inherit;
+    background-color: #fff;
+}
+
+sup {
+    vertical-align: top;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
