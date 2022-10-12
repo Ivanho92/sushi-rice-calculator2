@@ -1,0 +1,100 @@
+.quantity {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2.8px;
+    font-weight: 600;
+}
+
+.rice-quantity {
+    /* background: var(--color-light); */
+    border: 1px solid var(--color-dark);
+    padding-right: 0.5ch;
+    margin-inline-end: -4.4px;
+    border-radius: 1px;
+}
+
+.rice-quantity:has(.rice-quantity-input:focus) {
+    outline: 2px solid var(--color-dark);
+}
+
+.rice-quantity label {
+    display: inline;
+}
+
+.rice-quantity-input {
+    background: inherit;
+    padding-block: 0 !important;
+    width: 5.25ch !important;
+    height: fit-content !important;
+    border: none;
+    outline: none;
+    text-align: right;
+    /* margin-inline-end: -1px; */
+}
+
+.rice-quantity-input::-webkit-outer-spin-button,
+.rice-quantity-input::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.rice-quantity-input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.main select {
+    padding: var(--size-100);
+}
+
+.table-container {
+    padding: var(--size-300);
+    border-radius: 5px;
+}
+
+.table-container table {
+    width: 100%;
+    text-align: right;
+    border-collapse: collapse;
+    white-space: nowrap;
+    /* table-layout: fixed; */
+}
+
+.table-container table thead {
+    display: none;
+}
+
+.table-container table thead {
+    display: none;
+}
+
+.table-container table tbody {
+    display: grid;
+    background-color: white;
+}
+
+.table-container table tbody > tr {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+/* .table-container table tbody tr td {
+    vertical-align: middle;
+} */
+
+.table-container table tbody > tr + tr > td {
+    border-top: 1px solid lightgray;
+}
+
+.table-container table tr td:nth-child(2) {
+    text-align: left;
+}
+
+.table-container table tr td {
+    padding-block: var(--size-100);
+    padding-inline: var(--size-50);
+}

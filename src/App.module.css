@@ -1,0 +1,12 @@
+.app {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: var(--size-400);
+
+    /*
+    background: #a1ffce;
+    background: -webkit-linear-gradient(to top, #faffd1, #a1ffce);
+    background: linear-gradient(to top, #faffd1, #a1ffce);
+    */
+}
