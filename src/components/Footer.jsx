@@ -7,8 +7,10 @@ const Footer = () => {
                 <p>
                     <span className="colored-text">
                         Sushi Rice Calculator<sup>&copy;</sup>
-                    </span>{" "}
-                    by <a href="https://ivan-rodrigues.com">Ivan Rodrigues</a>
+                    </span>
+                    <span>
+                        {" "}by&nbsp;<a href="https://ivan-rodrigues.com">Ivan&nbsp;Rodrigues</a>
+                    </span>
                 </p>
             </div>
         </div>

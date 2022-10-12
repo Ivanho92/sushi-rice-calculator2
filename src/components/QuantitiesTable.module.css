@@ -1,17 +1,18 @@
 .quantity {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: baseline;
     gap: 2.8px;
     font-weight: 600;
 }
 
 .rice-quantity {
-    /* background: var(--color-light); */
-    border: 1px solid var(--color-dark);
     padding-right: 0.5ch;
     margin-inline-end: -4.4px;
     border-radius: 1px;
+    background-color: var(--color-tertiary-100);
+    /* background: var(--color-primary-50); */
+    /* border: 1px solid var(--color-grey-300); */
 }
 
 .rice-quantity:has(.rice-quantity-input:focus) {
@@ -25,12 +26,11 @@
 .rice-quantity-input {
     background: inherit;
     padding-block: 0 !important;
-    width: 5.25ch !important;
     height: fit-content !important;
-    border: none;
+    border: none !important;
     outline: none;
     text-align: right;
-    /* margin-inline-end: -1px; */
+    padding-inline-end: 2.8px;
 }
 
 .rice-quantity-input::-webkit-outer-spin-button,
@@ -97,4 +97,9 @@
 .table-container table tr td {
     padding-block: var(--size-100);
     padding-inline: var(--size-50);
+}
+
+.units {
+    /* font-weight: 400; */
+    font-size: var(--size-300);
 }

@@ -10,10 +10,11 @@
     padding-inline-start: var(--size-100);
     padding-block: 0.3rem;
     height: 2rem;
+    border: 1px solid var(--color-grey-400);
 }
 
 .main input[type="number"] {
-    width: 6ch;
+    min-width: 5ch;
     line-height: 1;
 }
 
@@ -24,6 +25,14 @@
 
 .main-bg {
     background-color: var(--color-primary-50);
+    /* background-color: var(--color-secondary); */
+    /* background-color: var(--color-tertiary); */
+    border: 5px solid var(--color-primary-400);
+    box-shadow: -1px 1px 24px -8px rgba(0,0,0,0.2);
+}
+
+.people-input {
+    width: 7ch;
 }
 
 .form-group {
@@ -32,4 +41,11 @@
     align-items: center;
     flex-wrap: wrap;
     column-gap: var(--size-400);
+}
+
+@media (max-width: 365px) {
+    .form-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }

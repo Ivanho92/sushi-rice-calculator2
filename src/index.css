@@ -17,6 +17,11 @@
     --color-dark: #1a1a1a;
     --color-light: #f3f3f3;
 
+    --color-grey-500: #808080; 
+    --color-grey-400: #999; 
+    --color-grey-300: #ccc; 
+    --color-grey-200: #E6E6E6; 
+
     --color-primary-50: #ffebef;
     --color-primary-100: #ffcdd3;
     --color-primary: #ff9999;
@@ -30,11 +35,20 @@
 
     --color-secondary: #99ffff;
 
+    --color-tertiary-100: #d6ffd4;
+    --color-tertiary-200: #baffb8;
     --color-tertiary: #99ff99;
+    --color-tertiary-400: #7afc7e;
+    --color-tertiary-500: #63f96b;
+    --color-tertiary-600: #51e661;
+    --color-tertiary-700: #35d056;
+    --color-tertiary-800: #11ba4d;
+    --color-tertiary-900: #00953b;
 
-    --breakpoint-sm: "(min-width: 576px)";
-    --breakpoint-md: "(min-width: 768px)";
-    --breakpoint-lg: "(min-width: 992px)";
+    --breakpoint-xsm: 365px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
 }
 
 /*

@@ -1,3 +1,5 @@
 .intro {
-    background-color: var(--color-primary-50);
+    /* background-color: var(--color-primary-50); */
+    /* background-color: var(--color-grey-200); */
+    background-color: var(--color-tertiary-100);
 }

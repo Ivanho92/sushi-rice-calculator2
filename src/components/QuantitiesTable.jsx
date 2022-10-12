@@ -1,6 +1,27 @@
+import { useContext } from "react";
+import { QuantitiesContext } from "../store/quantities-context";
+
 import styles from "./QuantitiesTable.module.css";
 
 const QuantitiesTable = () => {
+    const { quantities, parameters, setParameters, setIsRiceInputMaster } = useContext(QuantitiesContext);
+
+    const riceInputChangeHandler = e => {
+        setIsRiceInputMaster(true);
+        setParameters((prevParameters) => {
+            let value = e.target.value;
+
+            if (value === "" || value <= 0 || value > 9999) {
+                return prevParameters;
+            }
+
+            return {
+                ...prevParameters,
+                riceQuantity: e.target.value,
+            };
+        });
+    }
+
     return (
         <div className={styles["table-container"]}>
             <table>
@@ -12,7 +33,7 @@ const QuantitiesTable = () => {
                 </thead>
                 <tbody>
                     <tr className="flex">
-                        <td class={styles.quantity}>
+                        <td className={styles.quantity}>
                             <div className={styles["rice-quantity"]}>
                                 <input
                                     className={styles["rice-quantity-input"]}
@@ -20,38 +41,39 @@ const QuantitiesTable = () => {
                                     type="number"
                                     min="1"
                                     max="999"
-                                    defaultValue="400"
+                                    value={quantities.rice}
+                                    onChange={riceInputChangeHandler}
                                 />
-                                <label htmlFor="rice-quantity">g</label>
+                                <label htmlFor="rice-quantity" className={styles.units}>{parameters.units === "metric" ? "g" : "cup"}</label>
                             </div>
                         </td>
                         <td>Rice</td>
                     </tr>
                     <tr className="flex">
-                        <td class={styles.quantity}>
-                            <span>400</span>
-                            <span>ml</span>
+                        <td className={styles.quantity}>
+                            <span>{quantities.water}</span>
+                            <span className={styles.units}>{parameters.units === "metric" ? "ml" : "cup"}</span>
                         </td>
                         <td>Water</td>
                     </tr>
                     <tr className="flex">
-                        <td class={styles.quantity}>
-                            <span>54</span>
-                            <span>g</span>
+                        <td className={styles.quantity}>
+                            <span>{quantities.riceVinegar}</span>
+                            <span className={styles.units}>{parameters.units === "metric" ? "ml" : "tablespoon"}</span>
                         </td>
                         <td>Rice Vinegar</td>
                     </tr>
                     <tr className="flex">
-                        <td class={styles.quantity}>
-                            <span>10</span>
-                            <span>g</span>
+                        <td className={styles.quantity}>
+                            <span>{quantities.sugar}</span>
+                            <span className={styles.units}>{parameters.units === "metric" ? "g" : "tablespoon"}</span>
                         </td>
                         <td>Sugar</td>
                     </tr>
                     <tr className="flex">
-                        <td class={styles.quantity}>
-                            <span>4</span>
-                            <span>g</span>
+                        <td className={styles.quantity}>
+                            <span>{quantities.salt}</span>
+                            <span className={styles.units}>{parameters.units === "metric" ? "g" : "teaspoon"}</span>
                         </td>
                         <td>Salt</td>
                     </tr>
