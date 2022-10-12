@@ -14,12 +14,10 @@ const Main = () => {
             let value = e.target.value;
 
             if (value > 999) {
-                console.log("was here")
                 value = 999;
             }
 
             if (value < 0) {
-                console.log(value);
                 value = 0;
             }
 

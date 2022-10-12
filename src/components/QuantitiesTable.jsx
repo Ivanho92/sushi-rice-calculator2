@@ -11,13 +11,17 @@ const QuantitiesTable = () => {
         setParameters((prevParameters) => {
             let value = e.target.value;
 
-            if (value === "" || value <= 0 || value > 9999) {
-                return prevParameters;
+            if (value > 999999) {
+                value = 999999;
+            }
+
+            if (value < 0) {
+                value = 0;
             }
 
             return {
                 ...prevParameters,
-                riceQuantity: e.target.value,
+                riceQuantity: value,
             };
         });
     }
